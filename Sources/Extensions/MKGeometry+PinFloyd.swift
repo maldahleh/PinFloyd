@@ -104,7 +104,7 @@ extension MKAnnotation {
 
 // MARK: - CLLocationCoordinate2D
 
-extension CLLocationCoordinate2D: Equatable {}
+extension CLLocationCoordinate2D: @retroactive Equatable {}
 
 public func ==(lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
   return fabs(lhs.latitude - rhs.latitude) <= .ulpOfOne
